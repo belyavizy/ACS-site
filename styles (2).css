@@ -13,7 +13,6 @@
 
 
 /* --Carousel--*/
-#carouselIndicators{
 .carousel {
   margin-bottom: 50px;
 }
@@ -50,26 +49,25 @@
   font-size: 24px;
   font-weight: 700;
 }
-}
+
 
   @media (max-height: 769px){
     #carouselIndicators{
         height: 70vh;
     }
-    #carouselIndicators .carousel-item {
+    .carousel-item {
         height: 70vh;
     }
-    #carouselIndicators h3 {
+    h3 {
         margin-bottom: 30px;
         font-size: 40px;
         font-weight: 500;
       }
-      #carouselIndicators p {
+    p {
         font-size: 20px;
         font-weight: 300;
         width: 80%;
       }
-    
   }
 
 
@@ -100,30 +98,3 @@
 }
 
 
-/*--  Download form  --*/
-
-#contactForm{
-  width: 100%
-}
-
-@media (max-width: 500px) {
-  .input-group-text {
-    font-size: 75%;
-  }
-}
-
-@media (max-width: 400px) {
-  .input-group-text {
-    font-size: 50%;
-  }
-}
-
-.plain_text {
-  font-size: 110%;
-}
-
-.btn-primary {
-  --bs-btn-bg: #a6aab0;
-  --bs-btn-border-color: #c6c6c6;
-  --bs-btn-hover-bg: #c6c6c6;
-}

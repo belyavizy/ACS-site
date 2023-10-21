@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Auto Caption System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header -->
+    <header id="header" class="d-flex align-items-start">
+        <div class="container-fluid justify-content-start align-items-center">
+
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-md bg-dark border-bottom border-body" data-bs-theme="dark">
+
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                        <img src="img/logo.png" alt="logo" width="100">
+                        Auto Caption System</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Главная</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="download.html">Главная</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page"
+                                    href="documentation.html">Документация</a>
+                            </li>
+                            <!-- Dropdown -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" data-bs-auto-close="outside" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Что это?
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="details.html">Подробнее о системе титрования</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="learn.html">Обучающие видео</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <!-- Dropdown -->
+                                    <li class="dropend">
+                                        <a class="dropdown-item dropdown-toggle" href="#" role="button"
+                                            data-bs-toggle="dropdown">
+                                            Используемые технологии</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="caspar.html">CasparCG</a></li>
+                                            <li><a class="dropdown-item" href="cv.html">Computer Vision</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html">О нас</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <a class="btn btn-primary" href="app.html" role="button">Войти в ACS</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+
+    <!--    Scrollspy   -->
+    <div class="row flex-nowrap" id="scrollspy">
+        <div id="scrollspy-nav" class="col-auto col-md-4 col-xl-3 px-sm-2 px-0 bg-dark d-none d-md-block">
+            <nav class="navbar navbar-dark bg-dark flex-column align-items-stretch p-3">
+                <a class="navbar-brand" href="#">Navbar</a>
+                <nav class="nav nav-pills flex-column">
+                    <a class="nav-link" href="#item-1">Запуск кода. OBS</a>
+                    <nav class="nav nav-pills flex-column">
+                        <a class="nav-link ms-3 my-1" href="#item-1-1">Сцена с detected_name</a>
+                        <a class="nav-link ms-3 my-1" href="#item-1-2">Выбор NDI ресурса</a>
+                    </nav>
+                    <a class="nav-link" href="#item-2">Запуск нейросети</a>
+                    <a class="nav-link" href="#item-3">Telegram bot</a>
+                    <nav class="nav nav-pills flex-column">
+                        <a class="nav-link ms-3 my-1" href="#item-3-1">Информация о человеке</a>
+                        <a class="nav-link ms-3 my-1" href="#item-3-2">Запуск распознавания</a>
+                    </nav>
+                </nav>
+            </nav>
+        </div>
+        <div class="col-sm-12 col-md-8 p-5" id="scrollspy-content">
+            <div data-bs-spy="scroll" data-bs-target="#navbar-example3" data-bs-offset="0" tabindex="0">
+                <h4 id="item-1">Запуск кода. OBS</h4>
+                <p>Открыть OBS версии 28+ и
+                    включить в Tools WebSocket Server Settings с помощью галочки Enable WebSocket Server
+                    Settings.</p>
+                <h5 id="item-1-1">Сцена с detected_name</h5>
+                <p>Необходимо, чтобы был на сцене
+                    текстовый сурс с названием detected_name. При необходимости нужно настроить размеры
+                    текста, чтобы был корректно виден.</p>
+                <h5 id="item-1-2">Выбор NDI ресурса</h5>
+                <p>На сцене, где будет выводиться
+                    титр необходимо создать NDI Source, где в Source Name указать поток с названием в
+                    скобках CasparCG_1 (например: ASSISTANT-PC (CasparCG_1); добавить фильтр с
+                    хромакеем
+                </p>
+                <h4 id="item-2">Запуск нейросети</h4>
+                <p>Запустить файл
+                    auto-caption.exe. Должен открыться каспар и два окна Командной строки (В них можно
+                    посмотреть ошибки, в основном нужно для мониторинга).</p>
+                <p>Чтобы запустить на данный
+                    момент титр при распознании человека, нужно запустить insomnia с сайтом
+                    127.0.0.1:4446/send_ndi (для запуска титра заново - нажать кнопку send)
+                </p>
+                <h4 id="item-3">Telegram bot</h4>
+                <p>Чтобы начать работу с телеграм ботом (@auto_titration_bot) необходимо ввести команду /start и
+                    ввести пароль, который можно задать в config файле. После ввода пароля он удалится из переписки.
+                    При неправильном вводе пароля бот напишет сообщение &ldquo;В доступе отказано!&rdquo;.</p>
+                <h5 id="item-3-1">Информация о человеке</h5>
+                <p>При нажатии на кнопку &ldquo;Редактировать инф-цию о человеке" выведется список людей и после
+                    выбора&nbsp; меню с выбором, что нужно отредактировать.</p>
+                <h5 id="item-3-2">Запуск распознавания</h5>
+                <p>Для того, чтобы распознать человека во время съемки, необходимо после всей настройки нажать на
+                    кнопку "Начать распознавание", после чего бот вышлет сообщение с запросом rtsp пути камеры, с
+                    которой нужно распознавать.</p>
+
+            </div>
+        </div>
+    </div>
+    <!-- ======= About Section ======= -->
+    <!-- <section id="about" class="about">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-6 my-auto">
+                    <img src="img/carousel3.png" class="img-fluid " alt="face recognition">
+                </div>
+                <div class="col-lg-6 pt-4 pt-lg-0 content">
+                    <h3>Использование face recognition</h3>
+                    <p class="fst-italic">
+                        Face recognition - это передовая технология, которая позволяет автоматически распознавать и
+                        идентифицировать
+                        лицо человека на видеопотоке в реальном времени.
+                    </p>
+                    <ul>
+                        <li><i class="bi bi-check-circle"></i> Идентификация личности: Технология распознавания лиц
+                            определяет, кто
+                            находится перед камерой, и может сопоставить лицо с заранее вписанными данными о человеке.
+                        </li>
+                        <li><i class="bi bi-check-circle"></i> Зрительский опыт: Идентификация и предоставление
+                            информации о
+                            спикерах или участниках может улучшить пользовательский опыт и удовлетворенность аудитории.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section> -->
+    <!-- End About Section -->
+
+    <footer id="footer">
+        <!-- Copyright -->
+        <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+            © Зараменских В.А., Попов Л.Д., 2023
+        </div>
+        <!-- Copyright -->
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

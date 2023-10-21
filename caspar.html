@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Auto Caption System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header -->
+    <header id="header" class="d-flex align-items-start">
+        <div class="container-fluid justify-content-start align-items-center">
+
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-md bg-dark border-bottom border-body" data-bs-theme="dark">
+
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                        <img src="img/logo.png" alt="logo" width="100">
+                        Auto Caption System</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Главная</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="download.html">Главная</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="documentation.html">Документация</a>
+                            </li>
+                            <!-- Dropdown -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" data-bs-auto-close="outside" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    Что это?
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="details.html">Подробнее о системе титрования</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="learn.html">Обучающие видео</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <!-- Dropdown -->
+                                    <li class="dropend">
+                                        <a class="dropdown-item dropdown-toggle" href="#" role="button"
+                                            data-bs-toggle="dropdown">
+                                            Используемые технологии</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item active" aria-current="page"
+                                                    href="caspar.html">CasparCG</a></li>
+                                            <li><a class="dropdown-item" href="cv.html">Computer Vision</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html">О нас</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <a class="btn btn-primary" href="app.html" role="button">Войти в ACS</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="row p-5">
+        <div class="col-lg-2 col-md-3 col-sm-4 align-content-center">
+            <img src="img/casparlogo.png" class="img-fluid ">
+        </div>
+        <div class="col-lg-10 col-md-9 col-sm-8">
+            <p>CasparCG Server - это программное обеспечение для Windows и Linux, используемое для воспроизведения
+                профессиональной графики, аудио и видео на несколько выходов. Он транслируется в режиме 24/7 с 2006
+                года.</p>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- Carousel -->
+    <!-- <div id="carouselIndicators" class="carousel carousel-dark slide">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active" style="background-image: url(img/carousel1.png)">
+                <div class="carousel-container">
+                    <div class="carousel-content">
+                        <h3>Уникальная технология</h3>
+                        <p>Автоматическая титровальная система - узкоспециализированная программа для распознавания
+                            спикеров в
+                            прямом эфире</p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item" style="background-image: url(img/carousel2.png)">
+                <div class="carousel-container">
+                    <div class="carousel-content">
+                        <h3>Четкость и быстрота</h3>
+                        <p>Больше не нужно запоминать спикеров. Достаточно </p>
+                        <p>Достаточно сфотографировать спикеров и запустить программу</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item" style="background-image: url(img/carousel4.png)">
+                <div class="carousel-container">
+                    <div class="carousel-content">
+                        <h3>Титры на любой вкус</h3>
+                        <p>Используйте шаблоны из широкого списка представленных</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Предыдущий</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Следующий</span>
+        </button>
+    </div> -->
+
+    <!-- ======= About Section ======= -->
+    <!-- <section id="about" class="about">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-6 my-auto">
+                    <img src="img/carousel3.png" class="img-fluid " alt="face recognition">
+                </div>
+                <div class="col-lg-6 pt-4 pt-lg-0 content">
+                    <h3>Использование face recognition</h3>
+                    <p class="fst-italic">
+                        Face recognition - это передовая технология, которая позволяет автоматически распознавать и
+                        идентифицировать
+                        лицо человека на видеопотоке в реальном времени.
+                    </p>
+                    <ul>
+                        <li><i class="bi bi-check-circle"></i> Идентификация личности: Технология распознавания лиц
+                            определяет, кто
+                            находится перед камерой, и может сопоставить лицо с заранее вписанными данными о человеке.
+                        </li>
+                        <li><i class="bi bi-check-circle"></i> Зрительский опыт: Идентификация и предоставление
+                            информации о
+                            спикерах или участниках может улучшить пользовательский опыт и удовлетворенность аудитории.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section> -->
+    <!-- End About Section -->
+
+    <footer id="footer">
+        <!-- Copyright -->
+        <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+            © Зараменских В.А., Попов Л.Д., 2023
+        </div>
+        <!-- Copyright -->
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
